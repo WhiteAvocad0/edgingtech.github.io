@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact us</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/contact.css" rel="stylesheet" type="text/css">
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contactForm {
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure content does not overflow rounded corners */
+  }
+
+  .inputBox input[type="text"],
+  .inputBox textarea,
+  .inputBox input[type="submit"] {
+    border-radius: 5px; /* Rounded corners for input fields */
+  }
+
+  /* Additional Styles */
+  .white-text {
+    color: white;
+  }
+
+  .contactForm h2 {
+    color: white; /* Change "Send Message" text color to white */
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="join.html">Pricing</a></li>
+    <li><a href="">Tracking</a></li>
+    <li><a href="contact_us.html">Contact Us</a></li>
+    <li><a href="signup.html">Sign up</a></li>
+    <li><a href="login.html"><i class="fa fa-user-circle" style="font-size: 1.2em;"></i></a></li>
+  </ul>
+</nav>
+<section class="contact">
+    <div class="content-">
+		<h2 style="font-size: 50px; margin-bottom: 15px;" class="contact_text">Contact Us</h2>
+		<p style="font-size: 18px; line-height: 1.5; padding-top: 24px;" class="white-text"><b style="font-size: 40px;">Have a question about our services ?</b>
+    </div>
+    <div class="container-">
+        <div class="contactInfo">
+            <div class="box-">                
+                <div class="icon"><i class="fa solid fa-envelope"></i></div>
+                <div class="text white-text">
+                    <h3>Address</h3>
+                    <p>Jalan Teknologi 5,<br>Taman Teknologi Malaysia,<br>57000 Kuala Lumpur</p>
+                </div>
+            </div>
+            <div class="box-">                
+                <div class="icon"><i class="fa solid fa-phone"></i></div>
+                <div class="text white-text">
+                    <h3>Phone Number</h3>
+                    <p>+03 123445567</p>
+                </div>
+            </div>
+            <div class="box-">                
+                <div class="icon"><i class="fa solid fa-envelope"></i></div>
+                <div class="text">
+    				<h3>Email</h3>
+    				<a href="mailto:onthegoexpress@gmail.com" id="emailLink" style="color:black;text-decoration:none">onthegoexpress@gmail.com</a>
+				</div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form>
+    			<h2 style="color: black;">Send Message</h2>
+    				<div class="inputBox">
+        			<input type="text" name="fullName" required="required">
+        			<span>Full Name</span>
+    				</div>
+    			<div class="inputBox">
+        			<input type="email" name="email" required="required">
+        			<span>Email</span>
+    			</div>
+    				<div class="inputBox">
+        			<textarea name="message" required="required"></textarea>
+        			<span>Type your Message...</span>
+    			</div>
+    			<div class="inputBox">
+        			<input type="submit" value="Send">
+    			</div>
+			</form>
+        </div>
+    </div>
+</section>
+<button onclick="scrollToTop()" class="back-to-top" id="back-to-top-btn">↑</button>
+<script>
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Show Back to Top Button when scrolled down
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("back-to-top-btn").style.display = "block";
+  } else {
+    document.getElementById("back-to-top-btn").style.display = "none";
+  }
+}
+</script>
+<script src="contact.js"></script>
+</body>
+</html>
+
+
+
+
+

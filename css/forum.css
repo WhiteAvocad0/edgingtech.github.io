@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;	
+}
+body{
+	background-image:url("forum.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*Navigation Bar*/
+nav {
+  width: 100%;
+  height: 48px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 40px;
+}
+nav ul li a {
+  font-weight: 250;
+  font-size: 14.5px;
+  color: #adadad;
+  transition: 600ms;
+}
+nav ul li a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'roboot', sans-serif;
+  text-decoration: none;
+}
+nav {
+  width: 100%;
+  height: 48px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 40px;
+}
+nav ul li a {
+  font-weight: 250;
+  font-size: 14.5px;
+  color: #adadad;
+  transition: 600ms;
+}
+nav ul li a:hover {
+  color: #f5f5f7;
+}
+
+/*Main Css*/
+a{
+	text-decoration: none;
+	color:black;
+}
+
+h1,h4,ol{
+	margin:0;
+}
+ol{
+	padding-left:10px;
+}
+
+p{
+	margin:10px 0;
+}
+
+textarea{
+	width:80%;
+	height:80px;
+}
+
+.button{
+	display:block;
+	margin-top:10px;
+	padding:5px;
+	font-size:1em;
+	border-radius:12px;
+}
+.button:hover{
+	background-color:black;
+	color:white;
+	transform: scale(1.2);
+}
+.container{
+	padding-top:60px;
+	margin:0 50px;
+	font-size:14px;
+	margin-left:100px;
+	margin-right:100px;
+}
+.top-bar,.main{  
+	background-color: rgba(255, 255, 255, 0.5);
+  	backdrop-filter: blur(20px);
+	border-radius: 10px;
+	transition: 300ms ease-in-out;
+	color: black;
+	overflow: hidden;
+	padding:5px 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	opacity: 0.8;
+
+}
+.top-bar{
+	padding:5px 40px;
+	margin-bottom: 10px;
+}
+
+.main{
+	padding:10px 15px;
+}
+
+.row{
+	padding:5px 0;
+}
+
+.bottom{
+	display:flex;
+	color:grey;
+	font-size:12px;
+}
+
+.timestamp{
+	padding-right:10px;
+	color:black;
+}
+.comments{
+	margin:40px 0;
+}
+.comment{
+	margin:10px 0;
+}
+.comment-ts{
+	color:black;
+}
+.comment-count{
+	color:black;
+}
+.bottom,.top-comment{
+	display:flex;
+	color:grey;
+	font-size:12px;
+}
+.user{
+	padding-right:10px;
+	color:black;
+}
+

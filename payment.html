@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Payment</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="payment_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="#">Tracking</a></li>
+    <li><a href="contact_us.html">Contact Us</a></li>
+    <li><a href="signup.html">Sign up</a></li>
+    <li><a href="login.html"><i class="fa fa-user-circle" style="font-size: 1.2em;"></i></a></li>
+  </ul>
+</nav>
+<!-- Navigation Bar -->
+	
+<!-- Main -->
+<div class="payment_container">
+	<div class="item">
+		<h3>On-The-Go Express</h3>
+		<h1>Shipping Fee Payment</h1><br>
+		<p>Numbers of package: <b>10</b></p>
+		<p>Package Total Weight: <b>46 KG</b></p>
+		<p>Package Content: <b>Foods, Electronics, Clothes</b></p>
+		<p>Shipping Method: <b>Standard Shipping</b></p>
+		<p>Total Amount: <strong>RM150</strong></p>
+		<p>Order Created: <b>9/30/2024 14:00</b></p>
+		<p>Order ID: <b>004838914</b></p><br><br>
+		<form class="form">
+			<label><strong>Select Payment Method</strong></label><br>
+			<select name="payment" id="payment">
+				<option value="Credit or Debit Cards">Credit / Debit Cards</option>
+				<option value="Online Banking">Online Banking</option>
+				<option value="E-Wallet">E-Wallet</option>
+			</select><br><br>
+			<label><strong>Billing Address</strong></label><br>
+			<textarea></textarea><br><br>
+			<button onClick="window.open('join.html')">Cancel</button>
+			<button>Proceed Payment</button>
+		</form>
+	</div>
+</div>	
+<!-- Main -->
+</body>
+</html>
