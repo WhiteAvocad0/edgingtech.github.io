@@ -3,48 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <title>admin</title>
-<link href="css/admin.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link href="admin.css" rel="stylesheet" type="text/css">
-	<script src="main.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/admin.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body>
-	<nav>
-      <ul>
-		<li><a href="#"><i class="fa fa-bars" style="font-size: 1.2em; left: 0;" id="toggleButton"></i></a></li>
-        <li><a href="index.html">Home</a></li>  
-        <li><a href="events_details.html">Events</a></li>  
-        <li><a href="#">Group</a></li>  
-        <li><a href="gallery.html">Gallery</a></li>  
-		<li><a href="join.html">Join Us</a></li>  
-		<li><a href="#">Contact</a></li>  
-		<li><a href="login.html"><i class="fa fa-user-circle" style="font-size: 1.2em;"></i></a></li>
-      </ul>
-	</nav>
-	
-	<div class="dashboard">
-		<div class="items">
-			<h1>User Profile Management</h1>
-			<p>Manage user</p>
-		</div>
-		
-		<div class="items">
-			<h1>Content Management</h1>
-		</div>
-		
-		<div class="items">
-			<h1>Event Management</h1>
-		</div>
-		
-		<div class="items">
-			<h1>Forum Management</h1>
-		</div>
-		
-		<div class="items">
-			<h1>Reporting and Analytics</h1>
-		</div>
-	</div>
-	
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="join.html">Pricing</a></li>
+      <li><a href="#">Tracking</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="signin.html">Logout</a></li>
+      <li><a href="login.html"><i class="fa fa-user-circle" style="font-size: 1.2em;"></i></a></li>
+    </ul>
+  </nav>
+
+  <section class="admin-title">
+	<h1>Welcome Back, Bill</h1>
+  </section>
+
+  <div class="container">
+
+    <div class="dashboard-boxes">
+      <a href="#" class="dashboard-box">
+        <i class="fas fa-chart-line"></i> 
+        <h2>Analytics</h2>
+        <p>View website traffic and user engagement data.</p>
+      </a>
+
+      <a href="#" class="dashboard-box">
+        <i class="fas fa-users"></i>
+        <h2>Customer Management</h2>
+        <p>Manage user accounts and permissions.</p>
+      </a>
+
+      <a href="#" class="dashboard-box">
+        <i class="fas fa-motorcycle"></i>
+        <h2>Driver Management</h2>
+        <p>Manage Driver's Account</p>
+      </a>
+
+	  <a href="#" class="dashboard-box">
+        <i class="fas fa-shopping-cart"></i>
+        <h2>Orders</h2>
+        <p>View and manage customer orders.</p>
+      </a>
+
+	  <a href="map_tracking.html" class="dashboard-box">
+        <i class="fas fa-map"></i>
+        <h2>Real-Time Driver Tracking</h2>
+        <p>View all driver's current location</p>
+      </a>
+
+      <a href="#" class="dashboard-box">
+        <i class="fas fa-cog"></i>
+        <h2>Settings</h2>
+        <p>Configure website settings and preferences.</p>
+      </a>
+    </div>
+    </div>
 </body>
 </html>

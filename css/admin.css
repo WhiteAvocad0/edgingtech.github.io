@@ -1,80 +1,38 @@
-@charset "UTF-8";
-/* CSS Document */
-.admin_menu {
-	display: block;
+.dashboard-boxes {
+	display: flex;
+	flex-wrap: wrap;
+	/* Allow boxes to wrap on smaller screens */
+	gap: 20px;
 }
 
-.dashboard {
-	padding: 60px;
-	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-gap: 6px;
-	width: 100%;
-	height: 100%;
+.dashboard-box {
+	flex: 1 0 400px;
+	height: 250px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	padding: 20px;
+	text-align: center;
+	align-content: center;
+	text-decoration: none;
+	color: inherit;
+	transition: transform 0.2s ease;
 }
 
-.items {
-	background-color: black;
-	height: auto;
-	width: auto;
-	transition: 200ms ease-in-out;
+.dashboard-box:hover {
+	transform: translateY(-5px);
+	/* Slightly move the box up on hover */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* Add a subtle shadow */
 }
 
-.items:hover {
-	background-color: white;
-	border-color: black;
-	border: medium;
-	border-style: solid;
-	border-color: black;
-	border-width: thin;
+.dashboard-box i {
+	font-size: 3em;
+	margin-bottom: 10px;
 }
 
-.items h1 {
-	padding: 15px;
-	font-weight: 400;
-	font-size: 22px;
-	color: white;
+.admin-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-top: 90px;
+	margin-left: 20px;
 }
-
-.items p {
-	padding: 15px;
-	font-weight: 500;
-	font-size: 15px;
-	color: white;
-}
-
-.items:hover h1 {
-	color: black;
-}
-
-.items:hover p {
-	color: black;
-}
-
-.fa-bars {
-	display: none;
-}
-
-@media (max-width: 768px) {
-	.admin_menu {
-		display: none;
-	}
-	.dashboard {
-		margin-top: 350px;
-		grid-template-columns: auto;
-		padding: 0 20px 0 20px;
-		width: 100%;
-		height: 100%;
-		align-self: center;
-	}
-	.items {
-		height: auto;
-		width: auto;
-		min-height: 400px;
-	}
-	
-	.fa-bars {
-	display: block;
-}
-}
-
