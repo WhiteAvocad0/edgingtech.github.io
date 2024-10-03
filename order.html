@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Order Page</title>
+<link href="css/order.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script src="js/order.js"></script>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="join.html">Pricing</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="vieworder.html">Tracking</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="login.html"><i class="fa fa-user-circle" style="font-size: 1.2em;"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Order Section -->
+    <div class="blurry-background"></div>
+    <section class="container">
+        <div class="order-card">
+            <h2>Shipping Order Form</h2><br>
+            <form action="#" method="post" onsubmit="redirect(event)">
+                <div class="form-group">
+                    <label for="customer-type">Customer Type:</label>
+                    <select id="customer-type" name="customer-type" required>
+                        <option value="individual">Individual</option>
+                        <option value="business">Business</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="individual-name">
+                    <label for="individual-name">Name:</label>
+                    <input type="text" id="individual-name" name="individual-name">
+                </div>
+                
+                <div class="form-group" id="business-contact">
+                    <label for="-contact-number">Contact Number</label>
+                    <input type="text" id="contact-person" name="business-contact-person">
+                </div>
+
+                <div class="form-group" id="business-email">
+                    <label for="business-email">Email:</label>
+                    <input type="email" id="business-email" name="business-email">
+                </div>
+
+                <div class="form-group">
+                    <label for="starting-point">Starting Point (Pickup Address):</label>
+                    <textarea id="starting-point" name="starting-point" rows="1" required></textarea>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="destination">Destination Address:</label>
+                    <textarea id="destination" name="destination" rows="1" required></textarea>
+                </div>
+        
+                <div class="form-group">
+                    <label for="package-type">Package Type:</label>
+                    <select id="package-type" name="package-type" required>
+                        <option value="documents">Documents</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothes">Clothes</option>
+                        <option value="food">Food/Perishables</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="shipping-method">Shipping Method:</label>
+                    <select id="shipping-method" name="shipping-method" required>
+                        <option value="Same-Day Delivery">Same-Day Delivery</option>
+                        <option value="Next-Day Delivery">Next-Day Delivery</option>
+                        <option value="international-shipping">International Shipping</option>
+                        <option value="standard-shipping">Express Shipping</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="package-content">Package Content:</label>
+                    <textarea id="package-content" name="package-content" rows="3" placeholder="Describe what the package is....."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Number of Packages:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Total Weight (KG):</label>
+                    <input type="number" id="weight" name="weight" step="0.1" min="0.1" required>
+                </div>
+        
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <button type="reset" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="submit-btn">Submit Order</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Price Estimation Calculator Section -->
+    <section>
+        <div class="weight-card">
+            <h2>Price Estimation Calculator</h2>
+            <div class="form-group">
+                <label for="weight-total">Total Weight (KG):</label>
+                <input type="number" id="weight-total" step="0.1" min="0.1" placeholder="Enter weight">
+            </div>
+            <div class="form-group">
+                <label for="payment-method">Choose Payment Method:</label>
+                <select id="payment-method">
+                    <option value="full">Full Payment</option>
+                    <option value="installment">Installment</option>
+                </select>
+            </div>
+            <button onclick="calculatePrice()">Estimate Price</button>
+            
+            <!-- Result Display -->
+            <div class="price-info">
+                <p id="price-output">Total Price: RM0.00</p>
+                <p id="installment-output" style="display:none;">Monthly Payment: RM0.00</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

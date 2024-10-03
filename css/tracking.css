@@ -1,0 +1,166 @@
+@import url("vieworder.css");
+
+/* Nav Bar */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 48px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 40px;
+}
+
+nav ul li a {
+    font-weight: 250;
+    font-size: 14.5px;
+    color: #adadad;
+    transition: 600ms;
+}
+
+nav ul li a:hover {
+    color: #f5f5f7;
+}
+
+
+.container ,.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 65vh;
+}
+
+.map h1 {
+    margin-bottom: 15px;
+    margin-top:-50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+
+.tracking-card,.map {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-card{
+    text-align:center;
+}
+.progress-container {
+    margin: 30px 0;
+}
+
+.progress-bar {
+    position: relative;
+    height: 8px;
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 50px;
+}
+
+.progress {
+    position: absolute;
+    height: 100%;
+    width: 63%; 
+    background: #6a00f4;
+    border-radius: 50px;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.step {
+    text-align: center;
+    width: 25%;
+}
+
+.step i {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.step p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Completed and Active Step */
+.completed i {
+    color: #6a00f4;
+}
+
+.step i {
+    color: #ccc;
+}
+
+.completed p {
+    color: #6a00f4;
+}
+
+.invoice-btn {
+    background-color: #ffc107;
+    margin-right:55px;
+}
+
+.invoice-btn:hover {
+    background-color: #e0a800;
+}
+
+.blurry-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/tracking-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1; /* Send it behind the content */
+}
