@@ -1,0 +1,52 @@
+.user-list-actions {
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+  
+  .user-list-actions button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px; 
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .user-list {
+    padding-left: 20px;
+    list-style: none;
+  }
+  
+  .user-list li {
+    display: flex;
+    align-items: center; /* Vertically align checkbox and text */
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .user-checkbox {
+    margin-right: 15px; /* Add space between checkbox and text */
+  }
+  
+  .user-info {
+    flex-grow: 1; /* Allow user info to take up remaining space */
+  }
+  
+  .user-email {
+    display: block; /* Put email on a new line */
+    font-size: 0.9em;
+    color: #777;
+  }
+
+  .user-role {
+    display: block;  /* Put the role on a new line */
+    font-size: 0.8em;
+    color: #555;     /* Slightly lighter color for the role */
+    margin-top: 5px; /* Add some space above the role */
+  }

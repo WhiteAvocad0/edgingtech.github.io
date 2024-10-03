@@ -1,55 +1,93 @@
 .tracking-title {
-	font-size: 1.5em;
-	font-weight: bold;
-	padding-top: 90px;
-	margin-left: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top: 90px;
+  margin-left: 20px;
 }
 
 .combo-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow boxes to wrap on smaller screens */
-    gap: 20px;
-    padding-left: 20px;
-    padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow boxes to wrap on smaller screens */
+  gap: 20px;
+  padding-left: 20px;
+  padding-top: 40px;
 }
 
 .filter {
-    margin-bottom: 20px; /* Add some space below the filter */
-  }
-  
-  .filter select {
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    appearance: none; /* Remove default dropdown arrow in some browsers */
-    background-color: #fff; 
-    background-image: url("https://external-preview.redd.it/Vgl7QXd9nViEiKY2asLaUk4J0IXxJl5WrtEPgNcaGSk.jpg?auto=webp&s=13b95bfe54e61b3a86e4e17c938953a4bc9d1ac6");
-    background-repeat: no-repeat;
-    background-position: right 10px center; 
-    background-size: 16px 12px; /* Adjust arrow size */
-  }
-  
-  /* Hover and focus states */
-  .filter select:hover,
-  .filter select:focus {
-    border-color: #999;
-    outline: none; /* Remove default focus outline */
-  }
+  margin-bottom: 20px;
+  /* Add some space below the filter */
+}
 
-  /* ... other styles (for the combobox, etc.) ... */
+.filter select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none;
+  /* Remove default dropdown arrow in some browsers */
+  background-color: #fff;
+
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 12px;
+  /* Adjust arrow size */
+}
+
+/* Hover and focus states */
+.filter select:hover,
+.filter select:focus {
+  border-color: #999;
+  outline: none;
+  /* Remove default focus outline */
+}
+
+/* ... other styles (for the combobox, etc.) ... */
 
 .map-container {
-    display: flex;
-    justify-content: center; /* Horizontally center the map */
-    align-items: center;    /* Vertically center the map */
-    margin-top: 20px;       /* Add some space above the map */
-  }
-  
-  .map-image {
-    max-width: 80%;  /* Make the map responsive (adjust as needed) */
-    height: auto;     /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-  }
+  display: flex;
+  justify-content: center;
+  /* Horizontally center the map */
+  align-items: center;
+  /* Vertically center the map */
+  margin-top: 20px;
+  /* Add some space above the map */
+}
+
+.map-image {
+  max-width: 80%;
+  /* Make the map responsive (adjust as needed) */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+  /* Optional: Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle shadow */
+}
+
+/* ... other styles ... */
+
+.driver-statics {
+  margin-top: 20px;
+  padding: 20px 20px 50px 20px;
+}
+
+.driver-statics table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(80, 68, 68, 0.1);
+  /* Add a subtle shadow */
+}
+
+.driver-statics th,
+.driver-statics td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.driver-statics th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/analytics.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="login_body">
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="join.html">Pricing</a></li>
+    <li><a href="threads.html">Tracking</a></li>
+    <li><a href="contact_us.html">Contact Us</a></li>
+    <li><a href="#"><i class="fa fa-user-circle" style="font-size: 1.2em;"></i></a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="stat-box">
+    <h2>Monthly Sales</h2>
+    <p id="monthly-sales">$15,000</p> 
+    <canvas id="sales-chart"></canvas>
+  </div>
+
+  <div class="stat-box">
+    <h2>Registered Users</h2>
+    <p id="registered-users">500</p> 
+    <canvas id="users-chart"></canvas>
+  </div>
+
+  <div class="stat-box">
+    <h2>Packages This Month</h2>
+    <p id="packages-count">120</p> 
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Sample data for the charts (replace with your actual data)
+  const   
+salesData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+    datasets: [{
+      label: 'Monthly Sales',
+      data: [12000, 14500, 11000, 16000, 13000, 18000, 15500, 17000, 14000, 15000],
+      borderColor: 'rgba(75, 192, 192, 1)',
+      borderWidth: 1,
+      fill: true,
+      backgroundColor: 'rgba(75, 192, 192, 0.2)'
+    }]
+  };
+
+  const usersData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+    datasets: [{
+      label: 'Registered Users',
+      data: [300, 350, 380, 420, 450, 480, 460, 490, 500, 520],
+      borderColor: 'rgba(255, 99, 132, 1)',
+      borderWidth: 1,
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)'
+    }]
+  };
+
+  // Get the canvas elements
+  const salesChartCanvas = document.getElementById('sales-chart').getContext('2d');
+  const usersChartCanvas = document.getElementById('users-chart').getContext('2d');
+
+  // Create the charts
+  new Chart(salesChartCanvas, {
+    type: 'line',
+    data: salesData
+  });
+
+  new Chart(usersChartCanvas, {
+    type: 'line',
+    data: usersData
+  });
+</script>
+</body>
+</html>
