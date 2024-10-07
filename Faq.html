@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Frequently Asked Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="js/main.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d6d6d6;
+      }
+
+      nav ul {
+        background-color: black;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav ul li {
+        margin: 0 40px;
+      }
+
+      nav ul li a {
+      font-weight: 250;
+      font-size: 14.5px;
+      color: #adadad;
+      transition: 600ms;
+      }
+
+      nav ul li a:hover {
+      color: #f5f5f7;
+      }
+
+
+      .faq-container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-image: linear-gradient(160deg, #00767a 0%, #b85d29 100%);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 120px; /* Push FAQ section down to avoid overlap with navbar */
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .faq-question {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: #e2e6ea;
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 10px 15px;
+        border-left: 3px solid #007bff;
+        margin-bottom: 10px;
+        background-color: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      .faq-question.active + .faq-answer {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html">Pricing</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+        <li><a href="ClaimSupport.html">Claim Support</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li>
+          <a href="login.html"><i class="fa fa-user-circle"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="blurry-background"></div>
+    <!-- FAQ Section -->
+    <div class="faq-container">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq-item">
+        <div class="faq-question">What is your return policy?</div>
+        <div class="faq-answer">
+          Our return policy allows you to return items within 30 days of
+          receipt. The product must be unused and in the original packaging.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How long does shipping take?</div>
+        <div class="faq-answer">
+          Shipping typically takes 5-7 business days for domestic orders and
+          10-14 business days for international orders.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you offer customer support?</div>
+        <div class="faq-answer">
+          Yes, we offer 24/7 customer support via email and phone. You can
+          contact us anytime.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I track my order?</div>
+        <div class="faq-answer">
+          Yes, once your order has been shipped, we will send you a tracking
+          number via email.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you offer gift wrapping?</div>
+        <div class="faq-answer">
+          Yes, we offer gift wrapping options during the checkout process for an
+          additional fee.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to toggle the FAQ answers
+      const questions = document.querySelectorAll(".faq-question");
+
+      questions.forEach((question) => {
+        question.addEventListener("click", () => {
+          question.classList.toggle("active");
+          const answer = question.nextElementSibling;
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+          } else {
+            answer.style.display = "block";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

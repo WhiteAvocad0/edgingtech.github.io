@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Your Claim</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="js/main.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(202, 202, 202);
+      }
+
+      nav ul {
+        background-color: black;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav ul li {
+        margin: 0 40px;
+      }
+
+      nav ul li a {
+      font-weight: 250;
+      font-size: 14.5px;
+      color: #adadad;
+      transition: 600ms;
+      }
+
+      nav ul li a:hover {
+      color: #f5f5f7;
+      }
+
+
+      .form-container {
+        max-width: 800px;
+        margin: 150px auto 50px auto;
+        background: rgb(131, 58, 180);
+        background-color: #0093e9;
+        background-image: linear-gradient(160deg, #026aa5 0%, #b04c2a 100%);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-top: 10px;
+        font-size: 1.1em;
+        color: black;
+        font-weight: bolder;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Packaging Guide Section */
+      .guide-container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #e0f7fa;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .guide-container h2 {
+        text-align: center;
+        color: #00796b;
+      }
+
+      .guide-container ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .guide-container ul li {
+        background-color: #fff;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .guide-container ul li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .guide-container ul li i {
+        color: #00796b;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html">Pricing</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+        <li><a href="ClaimSupport.html">Claim Support</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li>
+          <a href="login.html"><i class="fa fa-user-circle"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="blurry-background"></div>
+    <!-- Claim Form Section -->
+    <div class="form-container">
+      <h1>Submit Your Claim</h1>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="claim-type">Claim Type</label>
+        <select id="claim-type" name="claim-type" required>
+          <option value="" disabled selected>Select claim type</option>
+          <option value="Lost-Item">Lost Item</option>
+          <option value="Damaged-Package">Damaged Package</option>
+          <option value="Late-Delivery">Late Delivery</option>
+          <option value="Theft">Theft</option>
+          <option value="Others">Others</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="5"
+          required
+        ></textarea>
+
+        <button>Submit Claim</button>
+      </form>
+    </div>
+
+    <!-- Packaging Guide Section -->
+    <div class="guide-container">
+      <h2>Packaging Guide</h2>
+      <ul>
+        <li>
+          <i class="fas fa-box-open"></i>
+          Use sturdy boxes to avoid damage.
+        </li>
+        <li>
+          <i class="fas fa-balance-scale"></i>
+          Avoid overloading the box to prevent collapse during shipment.
+        </li>
+        <li>
+          <i class="fas fa-tape"></i>
+          Secure all openings with strong packing tape.
+        </li>
+        <li>
+          <i class="fas fa-shield-alt"></i>
+          Include cushioning materials (bubble wrap, foam) to protect fragile
+          items.
+        </li>
+        <li>
+          <i class="fas fa-tag"></i>
+          Label the package clearly with the destination address and return
+          address.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
